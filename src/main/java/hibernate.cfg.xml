@@ -9,5 +9,9 @@
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
   <property name="hibernate.hbm2ddl.auto">update</property>
+  <mapping class="com.bean.Class"/>
+  <mapping class="com.bean.Subject"/>
+  <mapping class="com.bean.Student"/>
+  <mapping class="com.bean.Teacher"/>
  </session-factory>
 </hibernate-configuration>
