@@ -14,7 +14,7 @@ public class Class {
 @Id
 private int classid;
 private String classname;
-@OneToOne(mappedBy = "cl", optional = false)
+@OneToOne(mappedBy = "cl")
 private Subject subject;
 @ManyToMany
 private List<Teacher> listOfTeachers;

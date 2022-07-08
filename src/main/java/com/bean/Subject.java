@@ -10,8 +10,8 @@ public class Subject {
 @Id
 private int subjectid;
 private String subjectname;
-@OneToOne(optional = false)
-@JoinColumn(name="subclassid", referencedColumnName = "classid")
+@OneToOne(optional = true)
+@JoinColumn(name="subclassid", referencedColumnName = "classid") //where my subclassid is my foreign key
 private Class cl;
 public int getSubjectid() {
 	return subjectid;
