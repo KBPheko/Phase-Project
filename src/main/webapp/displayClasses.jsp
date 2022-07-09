@@ -13,6 +13,7 @@
 <body>
 <table>
 <h2>All Classes</h2>
+<button onclick="location.href='Home.jsp'">Back</button> <br/> <br/>
 <table border="1">
 <tr>
     <th>Class ID</th>

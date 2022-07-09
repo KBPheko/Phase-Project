@@ -53,12 +53,17 @@ public class SubjectController extends HttpServlet {
 		
 		int subjectid = Integer.parseInt(request.getParameter("subjectid"));
 		String subjectname = request.getParameter("subjectname");
-		Class cl = new Class();
+		int subclassid = Integer.parseInt(request.getParameter("subclassid"));
 		
 		Subject ss = new Subject();
+		
+		Class cc = new Class();
+		
 		ss.setSubjectid(subjectid);
 		ss.setSubjectname(subjectname);
-		//ss.setCl(subclassid);
+		ss.setCl(cc.setClassid(subclassid));
+		
+		//cc.setClassid(subclassid);
 		
 		SubjectService subServe = new SubjectService();
 		

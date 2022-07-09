@@ -8,6 +8,7 @@
 </head>
 <body>
 <h2>Add New Class Program</h2>
+<button onclick="location.href='Home.jsp'">Back</button> <br/> <br/>
 <form action="ClassController" method="post">
 <label>Class ID</label>
 <input type="text" name="classid" /> <br>

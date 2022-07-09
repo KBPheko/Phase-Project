@@ -10,7 +10,7 @@ public class Subject {
 @Id
 private int subjectid;
 private String subjectname;
-@OneToOne(optional = true)
+@OneToOne
 @JoinColumn(name="subclassid", referencedColumnName = "classid") //where my subclassid is my foreign key
 private Class cl;
 public int getSubjectid() {

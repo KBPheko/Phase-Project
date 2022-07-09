@@ -8,6 +8,7 @@
 </head>
 <body>
 <h2>Add Subject into a class</h2>
+<button onclick="location.href='Home.jsp'">Back</button> <br/> <br/>
 <form action="SubjectController" method="post">
 <label>Indicate class ID the subject belongs to : </label> |
 <input type="text" name="subclassid"/> <br> <br>
