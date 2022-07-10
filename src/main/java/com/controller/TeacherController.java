@@ -38,6 +38,11 @@ public class TeacherController extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	    response.setContentType("text/html");
 	    PrintWriter pw = response.getWriter();
+	    TeacherService ts = new TeacherService();
+	    List<Teacher> lstT = ts.getAllTeachers();
+	    request.setAttribute("obj", lstT);
+	    RequestDispatcher rd = request.getRequestDispatcher("displayTeachers.jsp");
+	    rd.forward(request, response);
 	}
 
 	/**
