@@ -24,10 +24,10 @@ public class Class {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int classid;
 private String classname;
-@OneToOne( cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+@OneToOne( cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 @JoinColumn(name = "subclassid_FK")
 private Subject subject;
-@ManyToMany
+@ManyToMany(mappedBy = "listOfClasses")
 private List<Teacher> listOfTeachers;
 @OneToMany(mappedBy = "stdclassid", cascade = CascadeType.ALL)
 private List<Student> listOfStudents;
