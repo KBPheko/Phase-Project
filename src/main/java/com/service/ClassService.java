@@ -11,6 +11,7 @@ public class ClassService {
 	ClassDao cd = new ClassDao();
 	
 	public String addClass(Class cl) {
+
 		if(cd.addClass(cl)>0) {
 			return "A new class has been added successfully";
 		} else {

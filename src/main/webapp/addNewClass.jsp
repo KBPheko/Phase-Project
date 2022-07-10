@@ -10,11 +10,11 @@
 <h2>Add New Class Program</h2>
 <button onclick="location.href='Home.jsp'">Back</button> <br/> <br/>
 <form action="ClassController" method="post">
-<label>Class ID</label>
-<input type="text" name="classid" /> <br>
-<label>Class Name</label>
-<input type="text" name="classname" /> <br>
-<input type="submit" value="Add Class">
+<label>Class Name: </label>
+<input type="text" name="classname" /> <br> <br>
+<label>Subject ID: </label>
+<input type="text" name="subjectid" /> <br> <br>
+<input type="submit" value="Add Class"> |
 <input type="reset" value="reset">
 </form>
 </body>

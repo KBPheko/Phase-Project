@@ -51,25 +51,17 @@ public class SubjectController extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		
-		int subjectid = Integer.parseInt(request.getParameter("subjectid"));
 		String subjectname = request.getParameter("subjectname");
-		int subclassid = Integer.parseInt(request.getParameter("subclassid"));
 		
 		Subject ss = new Subject();
 		
-		Class cc = new Class();
-		
-		ss.setSubjectid(subjectid);
 		ss.setSubjectname(subjectname);
-		ss.setCl(cc.setClassid(subclassid));
-		
-		//cc.setClassid(subclassid);
 		
 		SubjectService subServe = new SubjectService();
 		
 		String result = subServe.storeSubject(ss);
 		pw.println(result);
-		RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("addSubject.jsp");
 		rd.include(request, response);
 		
 	}

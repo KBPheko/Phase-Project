@@ -11,12 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bean.Class;
+import com.bean.Subject;
+import com.dao.SubjectDao;
 import com.service.ClassService;
 
 /**
  * Servlet implementation class ClassController
  */
-public class ClassController extends HttpServlet {
+public class ClassController extends HttpServlet {SubjectDao sd = new SubjectDao();
+	
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -51,17 +54,22 @@ public class ClassController extends HttpServlet {
 		 response.setContentType("text/html");
 		    PrintWriter pw = response.getWriter();
 		    
-		    int classid = Integer.parseInt(request.getParameter("classid"));
 		    String classname = request.getParameter("classname");
-		    
-		    Class cc = new Class();
-		    cc.setClassid(classid);
-		    cc.setClassname(classname);
+		    int subjectid = Integer.parseInt(request.getParameter("subjectid"));
+		   
+		    System.out.println("class name"+ classname);
+		    System.out.println("subject ID"+ subjectid);
+		    Subject s = sd.findSubjectById(subjectid);
+		
+		    Class c = new Class();
+	
+		    c.setClassname(classname);
+		    c.setSubject(s);
 		    
 		    ClassService cs = new ClassService();
-		    String result = cs.addClass(cc);
+		    String result = cs.addClass(c);
 		    pw.println(result);
-		    RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
+		    RequestDispatcher rd = request.getRequestDispatcher("addNewClass.jsp");
 		    rd.include(request, response);
 	}
 

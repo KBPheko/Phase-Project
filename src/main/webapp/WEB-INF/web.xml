@@ -39,4 +39,24 @@
     <servlet-name>SubjectController</servlet-name>
     <url-pattern>/SubjectController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TeacherController</display-name>
+    <servlet-name>TeacherController</servlet-name>
+    <servlet-class>com.controller.TeacherController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TeacherController</servlet-name>
+    <url-pattern>/TeacherController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentController</display-name>
+    <servlet-name>StudentController</servlet-name>
+    <servlet-class>com.controller.StudentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentController</servlet-name>
+    <url-pattern>/StudentController</url-pattern>
+  </servlet-mapping>
 </web-app>

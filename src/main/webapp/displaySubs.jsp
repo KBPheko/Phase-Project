@@ -16,7 +16,6 @@
 <tr>
     <th>Subject ID</th>
     <th>Subject Name</th>
-    <th>Subject Class ID</th>
 </tr>
 <%
 Object obj1 = request.getAttribute("obj");
@@ -30,7 +29,6 @@ if(obj1 != null){
 		   <tr>
 		        <td><%=s.getSubjectid() %></td>
 		        <td><%=s.getSubjectname() %></td>
-		        <td><%=s.getCl() %></td>
 		   </tr>
 		<% 
 	}

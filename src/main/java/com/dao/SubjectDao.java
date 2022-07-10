@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 import com.bean.Subject;
 import com.resource.SessionFactoryResource;
@@ -27,6 +28,16 @@ public class SubjectDao {
 		}
 	}
 	
+	public Subject findSubjectById(int id) {
+		Configuration con = new Configuration(); 
+		con.configure("hibernate.cfg.xml");
+		SessionFactory sf = con.buildSessionFactory();
+		Session session = sf.openSession();
+		Subject e=session.get(Subject.class, id);
+		return e;
+	}
+	
+
 	public List<Subject> getAllSubjects(){
 		SessionFactory sf = SessionFactoryResource.getSessionFactoryReference();
 		Session session = sf.openSession();
