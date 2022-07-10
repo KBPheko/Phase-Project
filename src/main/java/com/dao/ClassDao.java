@@ -36,6 +36,15 @@ public class ClassDao {
 		return listOfClasses;
 	}
 	
+	public List<Object[]> joinClassAndStudent(){
+		SessionFactory sf = SessionFactoryResource.getSessionFactoryReference();
+		Session session = sf.openSession();
+		Query qry = session.createNativeQuery("select c.classname,c.classid, s.studentname from class c inner join student s on c.classid = s.stdclassid");
+		
+		List<Object[]> obj = qry.list();
+		return obj;
+	}
+	
 	public Class findClassById(int id) {
 		Configuration con = new Configuration(); 
 		con.configure("hibernate.cfg.xml");

@@ -9,7 +9,7 @@ public class Student {
 private int studentid;
 private String studentname;
 private int age;
-private int stdclassid;
+private int stdclassid; //FK
 public int getStudentid() {
 	return studentid;
 }

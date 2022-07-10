@@ -14,7 +14,7 @@ public class Teacher {
 @Id
 private int teacherid;
 private String teachername;
-@ManyToMany(cascade = CascadeType.ALL)
+@ManyToMany(cascade = CascadeType.MERGE)
 @JoinTable(name="teacher_class", joinColumns = {@JoinColumn(name="teacherid")},inverseJoinColumns = {@JoinColumn(name="classid")})
 private List<Class> listOfClasses;
 public int getTeacherid() {

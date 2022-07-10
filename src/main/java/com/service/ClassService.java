@@ -27,4 +27,8 @@ public class ClassService {
 		}
 		return listOfClasses;
 	}
+	
+	public List<Object[]> findTrainerAndStudent(){
+		return cd.joinClassAndStudent();
+	}
 }
