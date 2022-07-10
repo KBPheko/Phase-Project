@@ -17,9 +17,10 @@ out.println("Choose an Action <hr/><br/>");
 
 <button onclick="location.href='login.jsp'">View Class Report</button> <br> <br>
 
-<button onclick="location.href='addNewClass.jsp'">Add new class</button> | <button onclick="location.href='ClassController'">Display All Classes</button> <br> <br>
-<button onclick="location.href='addSubject.jsp'">Add a subject</button> | <button onclick="location.href='SubjectController'">Display all Subjects</button> <br> <br>
-<button onclick="location.href='addTeacher.jsp'">Add a teacher</button> | <button onclick="location.href='TeacherController'">View all classes</button> <br> <br>
+<button onclick="location.href='addNewClass.jsp'">Add a class</button> | <button onclick="location.href='ClassController'">Display All Classes</button> <br> <br>
+<button onclick="location.href='addSubject.jsp'">Add a subject</button> | <button onclick="location.href='SubjectController'">Display all Subject Records</button> <br> <br>
+<button onclick="location.href='addTeacher.jsp'">Add a teacher</button> | <button onclick="location.href='TeacherController'">View all teacher records</button> <br> <br>
+<button onclick="location.href='addStudent.jsp'">Add a student</button> | <button onclick="location.href='StudentController'">View all student records</button> <br> <br>
 
 
 </body>

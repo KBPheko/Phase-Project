@@ -2,6 +2,7 @@ package com.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -43,6 +44,8 @@ public class ClassController extends HttpServlet {SubjectDao sd = new SubjectDao
 		request.setAttribute("obj", listOfClass);
 		RequestDispatcher rd = request.getRequestDispatcher("displayClasses.jsp");
 		rd.forward(request, response);
+		
+		//ClassService cs = new ClassService();
 	}
 
 	/**

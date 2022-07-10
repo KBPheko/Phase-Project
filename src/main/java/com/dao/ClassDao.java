@@ -39,7 +39,7 @@ public class ClassDao {
 	public List<Object[]> joinClassAndStudent(){
 		SessionFactory sf = SessionFactoryResource.getSessionFactoryReference();
 		Session session = sf.openSession();
-		Query qry = session.createNativeQuery("select c.classname,c.classid, s.studentname from class c inner join student s on c.classid = s.stdclassid");
+		Query qry = session.createNativeQuery("select c.classid,c.classname,s.studentname, s.age from class c inner join student s on c.classid = s.stdclassid");
 		
 		List<Object[]> obj = qry.list();
 		return obj;
