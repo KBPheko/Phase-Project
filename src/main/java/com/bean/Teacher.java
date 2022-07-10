@@ -2,6 +2,7 @@ package com.bean;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -13,11 +14,8 @@ public class Teacher {
 @Id
 private int teacherid;
 private String teachername;
-@ManyToMany
-@JoinTable(
-name="teacher_class", 
-joinColumns = {@JoinColumn(name="teacherid")},
-inverseJoinColumns = {@JoinColumn(name="classid")})
+@ManyToMany(cascade = CascadeType.ALL)
+@JoinTable(name="teacher_class", joinColumns = {@JoinColumn(name="teacherid")},inverseJoinColumns = {@JoinColumn(name="classid")})
 private List<Class> listOfClasses;
 public int getTeacherid() {
 	return teacherid;

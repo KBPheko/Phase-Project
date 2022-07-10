@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>All Subjects</h2>
+<h2>List of all Subjects</h2>
 <button onclick="location.href='Home.jsp'">Back</button> <br/> <br/>
 <table border="1">
 <tr>

@@ -19,7 +19,7 @@ out.println("Choose an Action <hr/><br/>");
 
 <button onclick="location.href='addNewClass.jsp'">Add new class</button> | <button onclick="location.href='ClassController'">Display All Classes</button> <br> <br>
 <button onclick="location.href='addSubject.jsp'">Add a subject</button> | <button onclick="location.href='SubjectController'">Display all Subjects</button> <br> <br>
-<button onclick="location.href='login.jsp'">Add a class</button> | <button onclick="location.href='login.jsp'">View all classes</button> <br> <br>
+<button onclick="location.href='addTeacher.jsp'">Add a teacher</button> | <button onclick="location.href='TeacherController'">View all classes</button> <br> <br>
 
 
 </body>
