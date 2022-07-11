@@ -15,7 +15,7 @@ out.println("Hello <b>" + username+"</b>.<br/> You are now Admin");
 out.println("Choose an Action <hr/><br/>");
 %>
 
-<button onclick="location.href='login.jsp'">View Class Report</button> <br> <br>
+<button onclick="location.href='ReportController'">View Class Report</button> <br> <br>
 
 <button onclick="location.href='addNewClass.jsp'">Add a class</button> | <button onclick="location.href='ClassController'">Display All Classes</button> <br> <br>
 <button onclick="location.href='addSubject.jsp'">Add a subject</button> | <button onclick="location.href='SubjectController'">Display all Subject Records</button> <br> <br>

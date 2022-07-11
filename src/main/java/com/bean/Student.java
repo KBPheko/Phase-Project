@@ -35,4 +35,11 @@ public void setStdclassid(int stdclassid) {
 	this.stdclassid = stdclassid;
 }
 
+@Override
+public String toString() {
+	//return "Student [name: "+studentname+", age: "+age+", std ID: "+ studentid+"]";
+	return ("Student Name: "+ this.getStudentname()+
+			" Student Age: "+ this.age +
+			" Student ID: "+this.studentid);
+}
 }

@@ -66,5 +66,4 @@ public List<Student> getListOfStudents() {
 public void setListOfStudents(List<Student> listOfStudents) {
 	this.listOfStudents = listOfStudents;
 }
-
 }

@@ -45,6 +45,15 @@ public class ClassDao {
 		return obj;
 	}
 	
+	public Object displaySubjectOnCond(String subjectname) {
+		SessionFactory sf = SessionFactoryResource.getSessionFactoryReference();
+		Session session = sf.openSession();
+		Query qry = session.createNativeQuery("select s.subjectname from class c inner join subject s on c.classid = s.subjectid and s.subjectname = :subjectName");
+		qry.setParameter("subjectName", subjectname);
+		List<Object> obj = qry.list();
+		return obj;
+	}
+	
 	public Class findClassById(int id) {
 		Configuration con = new Configuration(); 
 		con.configure("hibernate.cfg.xml");
